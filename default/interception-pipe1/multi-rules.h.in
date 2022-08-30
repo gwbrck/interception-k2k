@@ -1,33 +1,51 @@
-{ .keys = {KEY_LEFTALT, KEY_LEFTCTRL, KEY_LEFTMETA, KEY_RIGHTCTRL, KEY_H}, PRESS(KEY_LEFT), DOWN_IFF_ALL_DOWN(5) },
-{ .keys = {KEY_LEFTALT, KEY_LEFTCTRL, KEY_LEFTMETA, KEY_RIGHTCTRL, KEY_J}, PRESS(KEY_DOWN), DOWN_IFF_ALL_DOWN(5) },
-{ .keys = {KEY_LEFTALT, KEY_LEFTCTRL, KEY_LEFTMETA, KEY_RIGHTCTRL, KEY_K}, PRESS(KEY_UP), DOWN_IFF_ALL_DOWN(5) },
-{ .keys = {KEY_LEFTALT, KEY_LEFTCTRL, KEY_LEFTMETA, KEY_RIGHTCTRL, KEY_L}, PRESS(KEY_RIGHT), DOWN_IFF_ALL_DOWN(5) }
+{ .keys = {KEY_FN_1, KEY_H}, PRESS(KEY_LEFT), DOWN_IFF_ALL_DOWN(2) },
+{ .keys = {KEY_FN_1, KEY_J}, PRESS(KEY_DOWN), DOWN_IFF_ALL_DOWN(2) },
+{ .keys = {KEY_FN_1, KEY_K}, PRESS(KEY_UP), DOWN_IFF_ALL_DOWN(2) },
+{ .keys = {KEY_FN_1, KEY_L}, PRESS(KEY_RIGHT), DOWN_IFF_ALL_DOWN(2) },
+
+
+{ .keys = { KEY_FN_1, KEY_U },
+    .down_press = { KEY_RIGHTALT, KEY_RESERVED, KEY_7, KEY_RESERVED },
+    .up_press   = { KEY_RESERVED, KEY_7, KEY_RESERVED, KEY_RIGHTALT },
+    DOWN_IFF_ALL_DOWN(2) },
   
-/* Switch Control-lock when both Control are down, one cancels.
- *
- * `PRESS` specifies that Control key needs to be held down during toggled down,
- * and released when up. */
+{ .keys = { KEY_FN_1, KEY_I },
+    .down_press = { KEY_RIGHTALT, KEY_RESERVED, KEY_0, KEY_RESERVED },
+    .up_press   = { KEY_RESERVED, KEY_0, KEY_RESERVED, KEY_RIGHTALT },
+    DOWN_IFF_ALL_DOWN(2) },
 
-// { .keys = KEY_PAIR(CTRL), PRESS(KEY_LEFTCTRL), BOTH_DOWN_ONE_UP() },
-// { .keys = KEY_PAIR(META), PRESS(KEY_LEFTMETA), BOTH_DOWN_ONE_UP() },
+{ .keys = { KEY_FN_1, KEY_M },
+    .down_press = { KEY_RIGHTALT, KEY_RESERVED, KEY_8, KEY_RESERVED },
+    .up_press   = { KEY_RESERVED, KEY_8, KEY_RESERVED, KEY_RIGHTALT },
+    DOWN_IFF_ALL_DOWN(2) },
+ 
+{ .keys = { KEY_FN_1, KEY_COMMA },
+    .down_press = { KEY_RIGHTALT, KEY_RESERVED, KEY_9, KEY_RESERVED },
+    .up_press   = { KEY_RESERVED, KEY_9, KEY_RESERVED, KEY_RIGHTALT },
+    DOWN_IFF_ALL_DOWN(2) },
 
-/* Switch CapsLock when both Shift are down, one Shift cancels.
- *
- * `PRESS_ON_TOGGLE` specifies that CapsLock need to be pressed once when
- * toggled down and pressed again (to switch off CapsLock) when toggled up. */
+{ .keys = { KEY_FN_1, KEY_102ND },
+    .down_press = { KEY_RIGHTALT, KEY_RESERVED, KEY_102ND, KEY_RESERVED },
+    .up_press   = { KEY_RESERVED, KEY_102ND, KEY_RESERVED, KEY_RIGHTALT },
+    DOWN_IFF_ALL_DOWN(2) },
+
+{ .keys = { KEY_FN_1, KEY_MINUS },
+    .down_press = { KEY_RIGHTALT, KEY_RESERVED, KEY_MINUS, KEY_RESERVED },
+    .up_press   = { KEY_RESERVED, KEY_MINUS, KEY_RESERVED, KEY_RIGHTALT },
+    DOWN_IFF_ALL_DOWN(2) },
 
 
-// { .keys = KEY_PAIR(SHIFT), PRESS_ON_TOGGLE(KEY_CAPSLOCK), BOTH_DOWN_ONE_UP() },
-// { .keys = { KEY_LEFTMETA, KEY_F1 }, PRESS_ON_UP(KEY_SLEEP), DOWN_IFF_ALL_DOWN(2) },
+{ .keys = { KEY_FN_1, KEY_RIGHTBRACE },
+    .down_press = { KEY_RIGHTALT, KEY_RESERVED, KEY_RIGHTBRACE, KEY_RESERVED },
+    .up_press   = { KEY_RESERVED, KEY_RIGHTBRACE, KEY_RESERVED, KEY_RIGHTALT },
+    DOWN_IFF_ALL_DOWN(2) },
 
-/* Poor man's media keys. {{{ */
+{ .keys = { KEY_FN_1, KEY_Q },
+    .down_press = { KEY_RIGHTALT, KEY_RESERVED, KEY_Q, KEY_RESERVED },
+    .up_press   = { KEY_RESERVED, KEY_Q, KEY_RESERVED, KEY_RIGHTALT },
+    DOWN_IFF_ALL_DOWN(2) },
 
-// { .keys = { KEY_LEFTMETA, KEY_F8 }, PRESS_ON_DOWN(KEY_MUTE), DOWN_IFF_ALL_DOWN(2) },
-// { .keys = { KEY_LEFTMETA, KEY_F10 }, PRESS_ON_DOWN(KEY_VOLUMEUP), DOWN_IFF_ALL_DOWN(2) },
-// { .keys = { KEY_LEFTMETA, KEY_F9 }, PRESS(KEY_VOLUMEDOWN), DOWN_IFF_ALL_DOWN(2) },
-// 
-// { .keys = { KEY_LEFTMETA, KEY_LEFTCTRL, KEY_PAGEDOWN }, PRESS_ON_DOWN(KEY_MUTE), DOWN_IFF_ALL_DOWN(3) },
-// { .keys = { KEY_LEFTMETA, KEY_PAGEUP }, PRESS_ON_DOWN(KEY_VOLUMEUP), DOWN_IFF_ALL_DOWN(2) },
-// { .keys = { KEY_LEFTMETA, KEY_PAGEDOWN }, PRESS(KEY_VOLUMEDOWN), DOWN_IFF_ALL_DOWN(2) },
-/* }}} */
-/* vi:set ft=c: */
+{ .keys = { KEY_FN_1, KEY_E },
+    .down_press = { KEY_RIGHTALT, KEY_RESERVED, KEY_E, KEY_RESERVED },
+    .up_press   = { KEY_RESERVED, KEY_E, KEY_RESERVED, KEY_RIGHTALT },
+    DOWN_IFF_ALL_DOWN(2) },
